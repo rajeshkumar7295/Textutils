@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 export default function Textform(props) {
-  const handleUpperCase=()=>{
+  // const handleUpperCase=()=>{
     
-      const newText=text.toUpperCase();
-      setText(newText);
-      props.showAlert("converted to uppercase","success");
+  //     const newText=text.toUpperCase();
+  //     setText(newText);
+  //     props.showAlert("converted to uppercase","success");
     
-    }
+  //   }
     const handleLowerCase=()=>{
       
         const newText=text.toLowerCase();
@@ -49,7 +49,7 @@ export default function Textform(props) {
   <h1>{props.heading}</h1>
   <textarea className="form-control" value={text} style={{background:props.mode==='light'?'white':'#364f5c',color:props.mode==='light'?'black':'white'}} onChange={onchangeClick} id="myBox" rows="8"></textarea>
 </div>
-    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpperCase}>Convert To Uppercase</button>
+    {/* <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpperCase}>Convert To Uppercase</button> */}
     <button  disabled={text.length===0} className="btn btn-primary mx-2 my-2 " onClick={handleLowerCase}>Convert To Lowercase</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleClear}>Clear Text</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy Text</button>
